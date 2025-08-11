@@ -59,6 +59,7 @@ ALTER TABLE [dbo].[DimProducto] CHECK CONSTRAINT [FK_DimProducto_DimProductoFlag
 GO
 
 go
+
 CREATE TABLE [dbo].[FactVentas](
 	[FactVentaKey] [bigint] IDENTITY(1,1) NOT NULL,
 	[NumeroOrden] [nchar](10) NULL,
@@ -78,42 +79,42 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimEstado] FOREIGN KEY([ClienteEstadoKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_DimEstado] FOREIGN KEY([ClienteEstadoKey])
 REFERENCES [dbo].[DimEstado] ([EstadoKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_DimEstado]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimProducto] FOREIGN KEY([ProductoKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_DimProducto] FOREIGN KEY([ProductoKey])
 REFERENCES [dbo].[DimProducto] ([ProductoKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_DimProducto]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimTime_Envio] FOREIGN KEY([FechaEnvioKey])
-REFERENCES [dbo].DimTiempo ([FechaKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_DimTime_Envio] FOREIGN KEY([FechaEnvioKey])
+REFERENCES [dbo].[DimTiempo] ([FechaKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_DimTime_Envio]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas] FOREIGN KEY([FactVentaKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas] FOREIGN KEY([FactVentaKey])
 REFERENCES [dbo].[FactVentas] ([FactVentaKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_FactVentas]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas_Orden] FOREIGN KEY([FechaOrdenKey])
-REFERENCES [dbo].DimTiempo ([FechaKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas_Orden] FOREIGN KEY([FechaOrdenKey])
+REFERENCES [dbo].[DimTiempo] ([FechaKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_FactVentas_Orden]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas1] FOREIGN KEY([FactVentaKey])
+ALTER TABLE [dbo].[FactVentas]  WITH NOCHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas1] FOREIGN KEY([FactVentaKey])
 REFERENCES [dbo].[FactVentas] ([FactVentaKey])
 GO
 
