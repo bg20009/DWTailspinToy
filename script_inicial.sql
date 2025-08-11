@@ -3,8 +3,8 @@ go
 use DWTailspinToys;
 go
 
-CREATE TABLE DimTime (
-  FechaKey       INT NOT NULL PRIMARY KEY, -- YYYYMMDD
+CREATE TABLE DimTiempo (
+  FechaKey       INT NOT NULL IDENTITY(1,1) PRIMARY KEY, -- YYYYMMDD
   Fecha          DATE NOT NULL,
   Dia           TINYINT,
   Mes         TINYINT,
@@ -20,19 +20,17 @@ CREATE TABLE DimEstado (
   FechaInicio DATE,
   FechaFin   DATE,
   Estado     BIT,
-  FechaCargo      DATETIME
 );
 go
 CREATE TABLE DimProductoFlag(
 	ProductoFlagKey INT IDENTITY(1,1) PRIMARY KEY,
 	ProductoCategoria NVARCHAR(20),
-	ItemGroup NVARCHAR(5),
-	TipoKit NVARCHAR(5),
+	ItemGroup NVARCHAR(20),
+	TipoKit NVARCHAR(20),
 	Demographic NVARCHAR(20),
 	FechaInicial DATE,
 	FechaFin DATE,
 	Estado BIT,
-	FechaCargo DATETIME
 );
 go
 CREATE TABLE [dbo].[DimProducto](
@@ -46,7 +44,6 @@ CREATE TABLE [dbo].[DimProducto](
 	[FechaInicio] [date] NULL,
 	[FechaFin] [date] NULL,
 	[Estado] [bit] NULL,
-	[FechaCargo] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[ProductoKey] ASC
@@ -68,13 +65,12 @@ CREATE TABLE [dbo].[FactVentas](
 	[FechaOrdenKey] [int] NULL,
 	[FechaEnvioKey] [int] NULL,
 	[ProductoKey] [int] NULL,
-	[EstadoKey] [int] NULL,
+	[ClienteEstadoKey] [int] NULL,
 	[PromocionCode] [nchar](100) NULL,
 	[Cantidad] [int] NULL,
-	[PrecioUitario] [decimal](9, 2) NULL,
+	[PrecioUnitario] [decimal](9, 2) NULL,
 	[Descuento] [decimal](9, 2) NULL,
 	[Total] [decimal](18, 2) NULL,
-	[FechaCargo] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[FactVentaKey] ASC
@@ -82,7 +78,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimEstado] FOREIGN KEY([EstadoKey])
+ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimEstado] FOREIGN KEY([ClienteEstadoKey])
 REFERENCES [dbo].[DimEstado] ([EstadoKey])
 GO
 
@@ -97,7 +93,7 @@ ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_DimProducto]
 GO
 
 ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_DimTime_Envio] FOREIGN KEY([FechaEnvioKey])
-REFERENCES [dbo].[DimTime] ([FechaKey])
+REFERENCES [dbo].DimTiempo ([FechaKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_DimTime_Envio]
@@ -111,7 +107,7 @@ ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_FactVentas]
 GO
 
 ALTER TABLE [dbo].[FactVentas]  WITH CHECK ADD  CONSTRAINT [FK_FactVentas_FactVentas_Orden] FOREIGN KEY([FechaOrdenKey])
-REFERENCES [dbo].[DimTime] ([FechaKey])
+REFERENCES [dbo].DimTiempo ([FechaKey])
 GO
 
 ALTER TABLE [dbo].[FactVentas] CHECK CONSTRAINT [FK_FactVentas_FactVentas_Orden]

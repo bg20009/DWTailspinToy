@@ -1,0 +1,981 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/10/2025 6:06:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BGPGN5L"
+  DTS:CreatorName="DESKTOP-BGPGN5L\Admin"
+  DTS:DTSID="{88E84C73-CB60-461B-80F1-8BF4FCF40234}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.1"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="DimProducto"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{CA331C9D-9E68-4B49-B9B4-29EB32D94B70}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4F7BC82F-C5A5-4060-B11A-2CF9ACCC4DAB}"
+      DTS:ObjectName="DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-BGPGN5L\SQLEXPRESS;User ID=sa;Initial Catalog=DWTailspinToys;Provider=SQLOLEDB.1;Application Name=SSIS-DimProducto-{4F7BC82F-C5A5-4060-B11A-2CF9ACCC4DAB}DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADzAmRH3oZpQagm5E3Y9GfhPhhj/wygd7F74F3/hFMz7wAAAAAOgAAAAAIAACAAAADM3YfuI0A87ASM40h7OQgzSw5xmH+Wb+Ql+SrI1YLgVCAAAABs/t49sUZcC8LhFQKdaqjxzF85Bb+cxyFiHczsS8sYakAAAADZvNaMtk1mnLt5GeiP4GuCnderZSO/8fHwsC6spB0m7NJnTxIQ+HPd++rVlVFXee8JMPCPN0N4x+Z5lxRs8l67</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DWTailspinToys.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{95A40080-AC93-42A2-B9F2-ED8A4721B700}"
+      DTS:ObjectName="DWTailspinToys.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-BGPGN5L\SQLEXPRESS;User ID=sa;Initial Catalog=DWTailspinToys;TrustServerCertificate=True;Application Name=SSIS-DimProducto-{95A40080-AC93-42A2-B9F2-ED8A4721B700}DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACq8OXqSvzMUOa6TnjuZSQPcOTckrCORjz7cdHCx3WzPQAAAAAOgAAAAAIAACAAAADinEThRVcIT5qf2J0Q3Y2qsMXgcBA/6DbV0iFEaq3PQyAAAAATgPnAY+IfSdTz/PwARNPaQQQoD7iF3qh+UIPNAPUo2EAAAAC5OyCpWSwKk40MnE/Ofy+gukpXZqj2hMzXRSiZbrPr/mapH4MxCtYgOolqWduMrYmwDOw2FCXgWKabdm5BgwMb</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{263AE4F9-72A8-4F4C-8B17-BA53A1506F29}"
+      DTS:ObjectName="localhost\SQLEXPRESS.DWVentas20250407.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;User ID=sa;Initial Catalog=DWVentas20250407;Provider=SQLOLEDB.1;Application Name=SSIS-DimProducto-{263AE4F9-72A8-4F4C-8B17-BA53A1506F29}localhost\SQLEXPRESS.DWVentas20250407.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACXt4F5pCatFFudbRpuspMc42eJfO+iTVVC3VibQlWNrQAAAAAOgAAAAAIAACAAAABcvqWo9xJv2KKT7d/RzWUoRPdQwDXY07mgRAAv3WTPQSAAAAAhE7gMaSmT3DDC+kjiYjPWyMh4EMDyzG2bAPhueBE7LUAAAADZV2SmCW1QpgMlFrpXxjlVC2RzmWK36GD0uLYhLV2eYtLwUB+urmxftC/AaU1HRXnyMM/mKGg7LarSF0qaVOm2</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TailspinToys2020-US.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{558402A4-796D-44E0-8B4F-09D41D101EE2}"
+      DTS:ObjectName="TailspinToys2020-US.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-BGPGN5L\SQLEXPRESS;User ID=sa;Initial Catalog=TailspinToys2020-US;TrustServerCertificate=True;Application Name=SSIS-DimProducto-{558402A4-796D-44E0-8B4F-09D41D101EE2}DESKTOP-BGPGN5L\SQLEXPRESS.TailspinToys2020-US.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACc6W6MeuGzGsbDBwsF39tSBfMpkW0Ccl0QkAsP2e1z1wAAAAAOgAAAAAIAACAAAADsbHC/MWfCIhI7ymA8Sx28wmaKvdI7VRrdCbhreXAJ+CAAAAB/B18usTiLqTzUE3kFtiRzz6tXmU11LNDyquXLz35ch0AAAADUK5LEcF4kDQPsfZxiBvJgdUJaOxKitrDh8jIBsuSFBw889RRDLIAlJ0wKlm061+FghSrg4NUa8+3k6JsAvnQG</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar DimProducto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{5FE012E3-3599-4B8E-AEA3-4EA607320B7A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar DimProducto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar DimProducto\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimProductoFlag]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimProductoFlag]) [refTable]
+where [refTable].[ProductoCategoria] = ? and [refTable].[ItemGroup] = ? and [refTable].[TipoKit] = ? and [refTable].[Demographic] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoFlagKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoCategoria" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ItemGroup" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TipoKit" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Demographic" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaInicial" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaFin" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Estado" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Cargar DimProducto\181:invalid};#{Package\Cargar DimProducto\182:invalid};#{Package\Cargar DimProducto\183:invalid};#{Package\Cargar DimProducto\184:invalid};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar DimProducto\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BGPGN5L\SQLEXPRESS.DWTailspinToys.sa1]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda].Columns[ProductoCategoria]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductoCategoria"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoCategoria]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ProductoCategoria</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda].Columns[ItemGroup]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ItemGroup"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ItemGroup]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ItemGroup</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda].Columns[TipoKit]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="TipoKit"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[TipoKit]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">TipoKit</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda].Columns[Demographic]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Demographic"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Demographic]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">Demographic</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ProductoFlagKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ProductoFlagKey]"
+                      name="ProductoFlagKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">ProductoFlagKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar DimProducto\Cargar Datos"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Cargar Datos"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."DimProducto"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar DimProducto\Cargar Datos.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWTailspinToys.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWTailspinToys.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[ProductoID]"
+                      cachedDataType="i4"
+                      cachedName="ProductoID"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoID]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoID]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[ProductoSKU]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductoSKU"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoSKU]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoSKU]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[ProductoNombre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductoNombre"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoNombre]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoNombre]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[Canal]"
+                      cachedDataType="ui1"
+                      cachedName="Canal"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Canal]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Canal]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[PrecioRetail]"
+                      cachedDataType="cy"
+                      cachedName="PrecioRetail"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrecioRetail]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[PrecioRetail]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[FechaInicio]"
+                      cachedDataType="dbDate"
+                      cachedName="FechaInicio"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaInicio]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaInicio]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[FechaFin]"
+                      cachedDataType="dbDate"
+                      cachedName="FechaFin"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaFin]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaFin]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[Estado]"
+                      cachedDataType="bool"
+                      cachedName="Estado"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Estado]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Estado]" />
+                    <inputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].Columns[ProductoFlagKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductoFlagKey"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoFlagKey]"
+                      lineageId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ProductoFlagKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoKey]"
+                      dataType="i4"
+                      name="ProductoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoID]"
+                      dataType="i4"
+                      name="ProductoID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoSKU]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductoSKU" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoNombre]"
+                      dataType="wstr"
+                      length="200"
+                      name="ProductoNombre" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Canal]"
+                      dataType="ui1"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrecioRetail]"
+                      dataType="r8"
+                      name="PrecioRetail" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductoFlagKey]"
+                      dataType="i4"
+                      name="ProductoFlagKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaInicio]"
+                      dataType="dbTimeStamp"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaFin]"
+                      dataType="dbTimeStamp"
+                      name="FechaFin" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Estado]"
+                      dataType="bool"
+                      name="Estado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar DimProducto\Cargar Datos.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Cargar Datos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Cargar Datos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Cargar Datos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar DimProducto\Leer Datos"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Leer Datos"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+	ProductID as ProductoID,
+	ProductSKU as ProductoSKU,
+	ProductName as ProductoNombre,
+	ProductCategory as ProductoCategoria,
+	ItemGroup,
+	KitType as TipoKit,
+	Channels as Canal,
+	Demographic,
+	RetailPrice as PrecioRetail,
+	CAST(GETDATE() AS date) as FechaInicio,
+	CAST('9999-12-31' AS date) as FechaFin,
+	CAST(1 AS bit) AS Estado
+from Product;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar DimProducto\Leer Datos.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TailspinToys2020-US.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[TailspinToys2020-US.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoID]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoID]"
+                      name="ProductoID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoSKU]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoSKU]"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoSKU]"
+                      name="ProductoSKU"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoNombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoNombre]"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoNombre]"
+                      name="ProductoNombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoCategoria]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoCategoria]"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ProductoCategoria]"
+                      name="ProductoCategoria"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ItemGroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ItemGroup]"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[ItemGroup]"
+                      name="ItemGroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[TipoKit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoKit]"
+                      length="3"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[TipoKit]"
+                      name="TipoKit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Canal]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Canal]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Canal]"
+                      name="Canal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Demographic]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Demographic]"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Demographic]"
+                      name="Demographic"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[PrecioRetail]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[PrecioRetail]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[PrecioRetail]"
+                      name="PrecioRetail"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaInicio]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaInicio]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaInicio]"
+                      name="FechaInicio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaFin]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaFin]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[FechaFin]"
+                      name="FechaFin"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Estado]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Estado]"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].Columns[Estado]"
+                      name="Estado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoID]"
+                      dataType="i4"
+                      name="ProductoID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoSKU]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductoSKU" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoNombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductoNombre" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductoCategoria]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductoCategoria" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[ItemGroup]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoKit]"
+                      dataType="wstr"
+                      length="3"
+                      name="TipoKit" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Canal]"
+                      dataType="ui1"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Demographic]"
+                      dataType="wstr"
+                      length="50"
+                      name="Demographic" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[PrecioRetail]"
+                      dataType="cy"
+                      name="PrecioRetail" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaInicio]"
+                      dataType="dbDate"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaFin]"
+                      dataType="dbDate"
+                      name="FechaFin" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET].ExternalColumns[Estado]"
+                      dataType="bool"
+                      name="Estado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoID]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoID]"
+                      name="ProductoID" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoSKU]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoSKU]"
+                      name="ProductoSKU" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoNombre]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoNombre]"
+                      name="ProductoNombre" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoCategoria]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ProductoCategoria]"
+                      name="ProductoCategoria" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ItemGroup]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ItemGroup]"
+                      name="ItemGroup" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[TipoKit]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[TipoKit]"
+                      name="TipoKit" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Canal]"
+                      dataType="ui1"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Canal]"
+                      name="Canal" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Demographic]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Demographic]"
+                      name="Demographic" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[PrecioRetail]"
+                      dataType="cy"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[PrecioRetail]"
+                      name="PrecioRetail" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[FechaInicio]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[FechaInicio]"
+                      name="FechaInicio" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[FechaFin]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[FechaFin]"
+                      name="FechaFin" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Estado]"
+                      dataType="bool"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[Estado]"
+                      name="Estado" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar DimProducto.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Cargar DimProducto\Cargar Datos.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Cargar DimProducto\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Cargar DimProducto.Paths[Salida de origen de ADO NET]"
+              endId="Package\Cargar DimProducto\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar DimProducto\Leer Datos.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Cargar DimProducto"
+          TopLeft="518,149" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar DimProducto">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Cargar DimProducto\Leer Datos"
+          TopLeft="195,66" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Cargar DimProducto\Búsqueda"
+          TopLeft="307,157" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Cargar DimProducto\Cargar Datos"
+          TopLeft="478,253" />
+        <EdgeLayout
+          Id="Package\Cargar DimProducto.Paths[Salida de origen de ADO NET]"
+          TopLeft="261.5,108">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,49"
+              Start="0,0"
+              End="110,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="106,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106,24.5"
+                    Point2="110,24.5"
+                    Point3="110,28.5" />
+                  <mssgle:LineSegment
+                    End="110,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar DimProducto.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="371.5,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="178.5,54"
+              Start="0,0"
+              End="178.5,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="4,27" />
+                  <mssgle:LineSegment
+                    End="174.5,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="174.5,27"
+                    Point2="178.5,27"
+                    Point3="178.5,31" />
+                  <mssgle:LineSegment
+                    End="178.5,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.5690234375,32,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar DimProducto\Leer Datos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar DimProducto\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimProductoFlag]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar DimProducto\Cargar Datos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
