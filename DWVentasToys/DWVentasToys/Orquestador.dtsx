@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Orquestador"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{688BC8CD-8B4A-4614-B2E4-6CE90C29B750}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{11D85AB5-75DE-45F1-92CF-DA1C34A9CC93}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAMRFwBi4OMvGhjjghwbxDQjLLBltaff+9u6O3N/ZibqAAAAAAOgAAAAAIAACAAAACRy2HxLfmN6uHrgnbiGafuYM154NW6/ZFLX+5h4lGIoCAAAACH3lJU7YRKQq6XGvzGnMZ1yGFyFE6mZGo4sdmeqxbrrUAAAAA/JQiNWO7M+2portWxfK6x4UhYac0/Ok3HOZG85sAQt/t0NLDzhteyyPeJAyuZOxFeQUPVLeMwOQoWWkmE81dm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA6yOnvgOWawdyV0VePSJKW87ZZ4x4u8eCJJMYN3AGD9wAAAAAOgAAAAAIAACAAAACCd/gRzRE8zCLaquBU+bbP3A6OZ1spMpBwlYubii3bMSAAAAAsI6L5Am3DLdli12sZSb2NJ4CegwG3hev1S6g82XKiSkAAAACcMuwM+YZZZ1pAv4N5g9fQxmcCM2wor7iDaeeCkEkx7ozFaviTQl5m/NEFnpKIW3j/rZfEzWPLzSUkIkfMmEZ1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -192,13 +192,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174,42"
-          Id="Package\Limpiar FactVentas"
-          TopLeft="75,51" />
+          Size="133,42"
+          Id="Package\DimEstado"
+          TopLeft="233,216" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\DimProducto"
+          TopLeft="533,252" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\DimProductoFlag"
+          TopLeft="315,310" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\FactVentas"
+          TopLeft="733,186" />
         <NodeLayout
           Size="182,42"
           Id="Package\Limpiar DimProducto"
           TopLeft="138,131" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Limpiar FactVentas"
+          TopLeft="75,51" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="162,93">
@@ -233,36 +249,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="133,42"
-          Id="Package\DimEstado"
-          TopLeft="234,215" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="229,173">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71.5,42"
+              EndConnector="70.5,43"
               Start="0,0"
-              End="71.5,34.5">
+              End="70.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="0,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="4,21.5" />
                   <mssgle:LineSegment
-                    End="67.5,21" />
+                    End="66.5,21.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="67.5,21"
-                    Point2="71.5,21"
-                    Point3="71.5,25" />
+                    Point1="66.5,21.5"
+                    Point2="70.5,21.5"
+                    Point3="70.5,25.5" />
                   <mssgle:LineSegment
-                    End="71.5,34.5" />
+                    End="70.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -271,36 +283,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\DimProductoFlag"
-          TopLeft="315,310" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="300.5,257">
+          TopLeft="299.5,258">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.5,53"
+              EndConnector="97.5,52"
               Start="0,0"
-              End="96.5,45.5">
+              End="97.5,44.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="0,22" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
                   <mssgle:LineSegment
-                    End="92.5,26.5" />
+                    End="93.5,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="92.5,26.5"
-                    Point2="96.5,26.5"
-                    Point3="96.5,30.5" />
+                    Point1="93.5,26"
+                    Point2="97.5,26"
+                    Point3="97.5,30" />
                   <mssgle:LineSegment
-                    End="96.5,45.5" />
+                    End="97.5,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -309,10 +317,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="143,42"
-          Id="Package\DimProducto"
-          TopLeft="533,252" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="479,331">
@@ -347,10 +351,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="135,42"
-          Id="Package\FactVentas"
-          TopLeft="733,186" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="604.5,252">
