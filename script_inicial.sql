@@ -24,10 +24,10 @@ CREATE TABLE DimEstado (
 go
 CREATE TABLE DimProductoFlag(
 	ProductoFlagKey INT IDENTITY(1,1) PRIMARY KEY,
-	ProductoCategoria NVARCHAR(20),
-	ItemGroup NVARCHAR(20),
-	TipoKit NVARCHAR(20),
-	Demographic NVARCHAR(20),
+	ProductoCategoria NVARCHAR(50),
+	ItemGroup NVARCHAR(50),
+	TipoKit NVARCHAR(50),
+	Demographic NVARCHAR(50),
 	FechaInicial DATE,
 	FechaFin DATE,
 	Estado BIT,

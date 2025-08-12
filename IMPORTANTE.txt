@@ -1,0 +1,2 @@
+Importante!!!
+En el archivo de dimdates he agregado la fila bolson par las ventas que no tienen una fecha fin

@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|solutionrelative:FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|solutionrelative:DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProductFlag.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|solutionrelative:DimProductFlag.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\Orquestador.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|solutionrelative:Orquestador.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{107887C9-18CE-97CA-9E94-8151741F185F}|DWTailspinToy.dtproj|solutionrelative:DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FactVentas.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\FactVentas.dtsx",
+              "RelativeDocumentMoniker": "FactVentas.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\FactVentas.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "FactVentas.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:35:17.162Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DimProducto.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProducto.dtsx",
+              "RelativeDocumentMoniker": "DimProducto.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProducto.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "DimProducto.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:35:16.39Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DimProductFlag.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProductFlag.dtsx",
+              "RelativeDocumentMoniker": "DimProductFlag.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimProductFlag.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "DimProductFlag.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:35:15.684Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DimEstado.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimEstado.dtsx",
+              "RelativeDocumentMoniker": "DimEstado.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\DimEstado.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "DimEstado.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:35:12.477Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Orquestador.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\Orquestador.dtsx",
+              "RelativeDocumentMoniker": "Orquestador.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DWTailspinToy\\DWTailspinToy\\Orquestador.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "Orquestador.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:35:05.185Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
